@@ -8,7 +8,7 @@
         <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
-                    var markerA1 = this.el;
+                    var marker = this.el;
                     this.vidA1 = document.querySelector("#vid_A1");
 
                     marker.addEventListener('markerFound', function () {
@@ -21,7 +21,7 @@
                         this.vidA1.pause();
                     }.bind(this));
                     
-                    var markerA2 = this.el;
+                    var marker = this.el;
                     this.vidA2 = document.querySelector("#vid_A2");
 
                     markerA2.addEventListener('markerFound', function () {
