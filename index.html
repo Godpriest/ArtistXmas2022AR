@@ -13,12 +13,12 @@
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
-                        this.vid.play();
+                        this.vid_A1.play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
-                        this.vid.pause();
+                        this.vid_A1.pause();
                     }.bind(this));
                 },
                 
@@ -28,12 +28,12 @@
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
-                        this.vid.play();
+                        this.vid_A2.play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
-                        this.vid.pause();
+                        this.vid_A2.pause();
                     }.bind(this));
                 },
             });
