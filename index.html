@@ -8,32 +8,17 @@
         <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
-                    var marker_A1 = this.el;
-                    this.vid_A1 = document.querySelector("#vid_A1");
+                    var marker = this.el;
+                    this.vid = document.querySelector("#vid_A1");
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
-                        this.vid_A1.play();
+                        this.vid.play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
-                        this.vid_A1.pause();
-                    }.bind(this));
-                },
-                
-                init: function () {
-                    var marker_A2 = this.el;
-                    this.vid_A2 = document.querySelector("#vid_A2");
-
-                    marker.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vid_A2.play();
-                    }.bind(this));
-
-                    marker.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vid_A2.pause();
+                        this.vid.pause();
                     }.bind(this));
                 },
             });
