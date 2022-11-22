@@ -8,8 +8,23 @@
         <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
-                    var marker = this.el;
-                    this.vid = document.querySelector("#vid");
+                    var marker_A1 = this.el;
+                    this.vid_A1 = document.querySelector("#vid_A1");
+
+                    marker.addEventListener('markerFound', function () {
+                        this.toggle = true;
+                        this.vid.play();
+                    }.bind(this));
+
+                    marker.addEventListener('markerLost', function () {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }.bind(this));
+                },
+                
+                init: function () {
+                    var marker_A2 = this.el;
+                    this.vid_A2 = document.querySelector("#vid_A2");
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
@@ -76,7 +91,7 @@
                 id="markerA1"
             >
                 <a-video
-                    src="#vid_A2"
+                    src="#vid_A1"
                     scale="1 1.4 1"
                     position="0 0.1 0"
                     rotation="-90 0 0"
