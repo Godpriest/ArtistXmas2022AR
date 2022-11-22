@@ -13,25 +13,25 @@
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
-                        this.vid.play();
+                        this.vidA1.play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
-                        this.vid.pause();
+                        this.vidA1.pause();
                     }.bind(this));
                     
                     var markerA2 = this.el;
-                    this.vid = document.querySelector("#vid_A2");
+                    this.vidA2 = document.querySelector("#vid_A2");
 
                     markerA2.addEventListener('markerFound', function () {
                         this.toggle = true;
-                        this.vid.play();
+                        this.vidA2.play();
                     }.bind(this));
 
                     markerA2.addEventListener('markerLost', function () {
                         this.toggle = false;
-                        this.vid.pause();
+                        this.vidA2.pause();
                     }.bind(this));
                 },
             });
