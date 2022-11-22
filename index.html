@@ -9,7 +9,7 @@
             AFRAME.registerComponent('videohandler', {
                 init: function () {
                     var marker = this.el;
-                    this.vid = document.querySelectorALL("#vid_A1", "#vid_A2");
+                    this.vid = document.querySelector("#vid");
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
@@ -43,7 +43,7 @@
                     loop
                     crossorigin
                     webkit-playsinline
-                    autoplay
+                    autoplay="true"
                     muted
                     playsinline
                 ></video>
@@ -55,7 +55,7 @@
                     loop
                     crossorigin
                     webkit-playsinline
-                    autoplay
+                    autoplay="true"
                     muted
                     playsinline
                 ></video>
