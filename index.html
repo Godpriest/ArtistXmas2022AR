@@ -8,30 +8,19 @@
         <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
+                    var ArrTest= ["vidA1", "vidA2", "vidA3", "vidA4"];
+                    
                     var marker = this.el;
-                    this.vidA1 = document.querySelector("#vid_A1");
+                    this.ArrTest[i] = document.querySelector("#ArrTest[i]");
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
-                        this.vidA1.play();
+                        this.ArrTest[i].play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
-                        this.vidA1.pause();
-                    }.bind(this));
-                    
-                    var marker = this.el;
-                    this.vidA2 = document.querySelector("#vid_A2");
-
-                    markerA2.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vidA2.play();
-                    }.bind(this));
-
-                    markerA2.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vidA2.pause();
+                        this.ArrTest[i].pause();
                     }.bind(this));
                 },
             });
