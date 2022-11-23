@@ -10,10 +10,10 @@
                 init: function () {
                     var ArrTest = ["vid_A1", "vid_A2", "vid_A3", "vid_A4"];
                     var ArrTest2 = ["#vid_A1", "#vid_A2", "#vid_A3", "#vid_A4"];
-for (var i = 0; i < ArrTest.length; i++) {
+                    for (var i = 0; i < 1; i++) {
 
                     var marker = this.el;
-                    this.ArrTest[i] = document.getElementById(ArrTest[i]).innerHTML;
+                    this.ArrTest[i] = document.querySelector("#vid_A1");
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
@@ -23,6 +23,19 @@ for (var i = 0; i < ArrTest.length; i++) {
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
                         this.ArrTest[i].pause();
+                    }.bind(this));
+                        
+                                            var marker = this.el;
+                    this.ArrTest[i+1] = document.querySelector("#vid_A2");
+
+                    marker.addEventListener('markerFound', function () {
+                        this.toggle = true;
+                        this.ArrTest[i+1].play();
+                    }.bind(this));
+
+                    marker.addEventListener('markerLost', function () {
+                        this.toggle = false;
+                        this.ArrTest[i+1].pause();
                     }.bind(this));
                     }
                 },
