@@ -9,10 +9,6 @@
             AFRAME.registerComponent('videohandler', {
                 init: function () {
                     var marker = this.el;
-                    this.xmas = document.querySelector("#xmas");
-                    this.xmas.play();
-                    
-                    var marker = this.el;
                     this.vidA1 = document.querySelector("#vid_A1");
 
                     marker.addEventListener('markerFound', function () {
@@ -76,13 +72,6 @@
                     muted
                     playsinline
                 ></video>
-                <audio
-                    id="xmas"
-                    src="audio/xmas.mp3"
-                    controls
-                    autoplay
-                    loop
-                ></audio>
             </a-assets>
 
             <a-marker
