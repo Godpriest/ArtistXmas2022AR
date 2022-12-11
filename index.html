@@ -267,58 +267,6 @@
                         this.toggle = false;
                         this.vidC4.pause();
                     }.bind(this));
-                    
-                    var marker = this.el;
-                    this.vidC5 = document.querySelector("#vid_C5");
-
-                    marker.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vidC5.play();
-                    }.bind(this));
-
-                    marker.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vidC5.pause();
-                    }.bind(this));
-                    
-                    var marker = this.el;
-                    this.vidC6 = document.querySelector("#vid_C6");
-
-                    marker.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vidC6.play();
-                    }.bind(this));
-
-                    marker.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vidC6.pause();
-                    }.bind(this));
-                    
-                    var marker = this.el;
-                    this.vidC7 = document.querySelector("#vid_C7");
-
-                    marker.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vidC7.play();
-                    }.bind(this));
-
-                    marker.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vidC7.pause();
-                    }.bind(this));
-                    
-                    var marker = this.el;
-                    this.vidC8 = document.querySelector("#vid_C8");
-
-                    marker.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vidC8.play();
-                    }.bind(this));
-
-                    marker.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vidC8.pause();
-                    }.bind(this));
                 },
             });
         </script>
@@ -565,54 +513,6 @@
                 <video
                     id="vid_C4"
                     src="assets/C4.mp4"
-                    preload="metadata"
-                    response-type="arraybuffer"
-                    loop
-                    crossorigin
-                    webkit-playsinline
-                    autoplay
-                    muted
-                    playsinline
-                ></video>
-                <video
-                    id="vid_C5"
-                    src="assets/C5.mp4"
-                    preload="metadata"
-                    response-type="arraybuffer"
-                    loop
-                    crossorigin
-                    webkit-playsinline
-                    autoplay
-                    muted
-                    playsinline
-                ></video>
-                <video
-                    id="vid_C6"
-                    src="assets/C6.mp4"
-                    preload="metadata"
-                    response-type="arraybuffer"
-                    loop
-                    crossorigin
-                    webkit-playsinline
-                    autoplay
-                    muted
-                    playsinline
-                ></video>
-                <video
-                    id="vid_C7"
-                    src="assets/C7.mp4"
-                    preload="metadata"
-                    response-type="arraybuffer"
-                    loop
-                    crossorigin
-                    webkit-playsinline
-                    autoplay
-                    muted
-                    playsinline
-                ></video>
-                <video
-                    id="vid_C8"
-                    src="assets/C8.mp4"
                     preload="metadata"
                     response-type="arraybuffer"
                     loop
@@ -1048,7 +948,7 @@
             >
                 <a-video
                     src="#vid_C2"
-                    scale="1.4 1 1"
+                    scale="1 1.4 1"
                     position="0 0.1 0"
                     rotation="-90 0 0"
                     class="clickable"
@@ -1098,102 +998,6 @@
                     src="#vid_C4"
                     scale="1 1.4 1"
                     position="0 0.1 0"
-                    rotation="-90 0 0"
-                    class="clickable"
-                    gesture-handler
-                ></a-video>
-            </a-marker>
-            
-            <a-marker
-                type="pattern"
-                preset="custom"
-                url="assets/C5.patt"
-                videohandler
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance="0.01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA1"
-            >
-                <a-video
-                    src="#vid_C5"
-                    scale="1.6 1.4 1"
-                    position="0 0.1 0"
-                    rotation="-90 0 0"
-                    class="clickable"
-                    gesture-handler
-                ></a-video>
-            </a-marker>
-            
-            <a-marker
-                type="pattern"
-                preset="custom"
-                url="assets/C6.patt"
-                videohandler
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance="0.01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA1"
-            >
-                <a-video
-                    src="#vid_C6"
-                    scale="1.4 1 1"
-                    position="0 0.1 0"
-                    rotation="-90 0 0"
-                    class="clickable"
-                    gesture-handler
-                ></a-video>
-            </a-marker>
-            
-            <a-marker
-                type="pattern"
-                preset="custom"
-                url="assets/C7.patt"
-                videohandler
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance="0.01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA1"
-            >
-                <a-video
-                    src="#vid_C7"
-                    scale="1 1.4 1"
-                    position="0 0.1 0"
-                    rotation="-90 0 0"
-                    class="clickable"
-                    gesture-handler
-                ></a-video>
-            </a-marker>
-            
-            <a-marker
-                type="pattern"
-                preset="custom"
-                url="assets/C8.patt"
-                videohandler
-                smooth="true"
-                smoothCount="10"
-                smoothTolerance="0.01"
-                smoothThreshold="5"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA1"
-            >
-                <a-video
-                    src="#vid_C8"
-                    scale="1 1.4 1"
-                    position="0 0 0.5"
                     rotation="-90 0 0"
                     class="clickable"
                     gesture-handler
